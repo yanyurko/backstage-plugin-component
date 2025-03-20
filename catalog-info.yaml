@@ -1,9 +1,14 @@
 apiVersion: backstage.io/v1alpha1
-kind: Component
+kind: Group
 metadata:
-  name: team-assessment
-  description: An example of a Backstage application.
+  name: infrastructure
+  description: The infra business unit
 spec:
-  type: service
-  owner: john@example.com
-  lifecycle: experimental
+  type: business-unit
+  profile:
+    displayName: Infrastructure
+    email: infrastructure@example.com
+    picture: https://example.com/groups/bu-infrastructure.jpeg
+  parent: ops
+  children: [backstage, other]
+  members: [jdoe]
